@@ -41,11 +41,11 @@ cacheSolve <- function(x, ...)
   if(!is.null(Inv))           # if the a$getInverse() is not equal to null then spit out the value of Inv else continue calculating Inverse
   {
     message("getting cached data")
-    return(Inv)
+    return(Inv)               # spit out the value of the Inv that was previously cached.
   }
   data <- x$get()
   #print(data)
   Inv <- solve(data, ...)
   x$setInverse(Inv)
-  Inv
+  Inv                       # spit out the value of the Inv that was calculated
 }
